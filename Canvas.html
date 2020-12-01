@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Canvas Sample</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="canvasStyles.css" media="screen">
+</head>
+
+<body>
+  <div id="mainDiv">
+    <header>
+      <h3>A Sample Canvas</h3>
+    </header>
+    
+    <section>
+      <h4>Here is my canvas tag:</h4>
+      <canvas id="myCanvas" width="300" height="300" style="border:1px solid #000000;">
+Your browser does not support the HTML canvas tag.
+</canvas>
+
+    </section>
+    
+    <br><br>
+    <footer>
+      © 2019
+    </footer>
+  </div>
+  
+  <script>
+
+// Create line
+var c = document.getElementById('myCanvas');
+var ctx = c.getContext("2d");
+ctx.moveTo(0,0);
+ctx.lineTo(79,300);
+ctx.stroke();
+//Create line 
+ctx.moveTo(0,0);
+ctx.lineTo(300,64);
+ctx.stroke(); 
+//Create line
+ctx.moveTo(0,0);
+ctx.lineTo(300,300);
+ctx.stroke();
+//Create circle
+ctx.beginPath();
+ctx.arc(0,20,40,0,2*Math.PI);
+ctx.fillStyle = "yellow";
+ctx.fill();
+ctx.stroke();
+//Create circle
+ctx.beginPath();
+ctx.arc(297,120,40,0,2*Math.PI);
+ctx.fillStyle = "red";
+ctx.fill();
+ctx.stroke();
+//Create circle
+ctx.beginPath();
+ctx.arc(178,299,40,0,2*Math.PI);
+ctx.fillStyle = "blue";
+ctx.fill();
+ctx.stroke();
+
+//Create circle
+ctx.beginPath();
+ctx.arc(0, 270,40,0,2*Math.PI);
+ctx.fillStyle = "aqua";
+ctx.fill();
+ctx.stroke();
+
+//Create circle
+ctx.beginPath();
+ctx.arc(150, 150,40,0,2*Math.PI);
+ctx.fillStyle = "lime";
+ctx.fill();
+ctx.stroke();
+
+//Create circle
+ctx.beginPath();
+ctx.arc(162, 20,40,0,2*Math.PI);
+ctx.fillStyle = "salmon";
+ctx.fill();
+ctx.stroke();
+
+//Create circle
+ctx.beginPath();
+ctx.arc(0, 150,40,0,2*Math.PI);
+ctx.fillStyle = "coral";
+ctx.fill();
+ctx.stroke();
+
+ // Cubic curves example
+    ctx.beginPath();
+    ctx.moveTo(75, 40);
+    ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
+    ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
+    ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
+    ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
+    ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
+    ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
+	ctx.fillStyle = "purple";
+    ctx.fill();
+//Create smiley face
+ ctx.beginPath();
+    ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+    ctx.moveTo(110, 75);
+    ctx.arc(75, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
+    ctx.moveTo(65, 65);
+    ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
+    ctx.moveTo(95, 65);
+    ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+	ctx.fillStyle = "green";
+    ctx.fill();
+    ctx.stroke();
+	
+	//Create rectangle
+	ctx.beginPath();
+ctx.rect(50, 150, 100, 100);
+ctx.fillStyle = "pink";
+ctx.fill();
+ctx.stroke();
+
+//Create rectangle
+	ctx.beginPath();
+ctx.rect(200, 0, 100, 100);
+ctx.fillStyle = "orange";
+ctx.fill();
+ctx.stroke();
+
+	//Create rectangle
+	ctx.beginPath();
+ctx.rect(230, 200, 100, 100);
+ctx.fillStyle = "grey";
+ctx.fill();
+ctx.stroke();
+  </script>
+
+</body>
+</html>
